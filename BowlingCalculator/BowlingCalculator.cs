@@ -19,6 +19,16 @@ namespace BowlingCalculator
 
             return calculator_results;
         }
+
+        public List<int> Get_FrameResults(int frame_id)
+        {
+            return game.Get_frame_result(frame_id);
+        }
+
+        public int Get_FrameScores(int frame_id)
+        {
+            return game.Get_frame_score(frame_id);
+        }
     }
 
     class Game
