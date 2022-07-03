@@ -29,6 +29,11 @@ namespace BowlingCalculator
         {
             return game.Get_frame_score(frame_id);
         }
+
+        public int Get_FrameTotal(int frame_id)
+        {
+            return game.Get_total(frame_id);
+        }
     }
 
     class Game
@@ -140,10 +145,6 @@ namespace BowlingCalculator
                 results[frame_id_counter - 1].Add_resultThrow(result);
                 UpdateTotalScoreOfFrame(frame_id_counter - 1);
             }
-        }
-        public int Get_current_frame_id()
-        {
-            return frame_id_counter;
         }
 
         public List<int> Get_frame_result(int frame_id)
@@ -271,11 +272,6 @@ namespace BowlingCalculator
             public int Get_total()
             {
                 return this.total;
-            }
-
-            public bool Get_isBonusThrow()
-            {
-                return this.isBonusThrow;
             }
 
             public void Set_isBonusThrow(bool value)

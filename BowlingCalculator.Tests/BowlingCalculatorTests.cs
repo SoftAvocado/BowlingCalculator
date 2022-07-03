@@ -88,5 +88,20 @@ namespace BowlingCalculator.Tests
 
             Assert.AreEqual(expexted_result, actual_result);
         }
+
+        [TestMethod]
+        public void get_FrameTotal_FromStandardThrowsFrame()
+        {
+            List<int> throws = new List<int>() { 10, 7, 3, 7, 2, 9, 1, 10, 10, 10, 2, 3, 6, 4, 7, 3, 3 };
+            int frame_id = 2;
+            int expexted_result = 37;
+            int actual_result;
+
+            Calculator calc = new Calculator();
+            calc.calculate_Throws(throws);
+            actual_result = calc.Get_FrameTotal(frame_id);
+
+            Assert.AreEqual(expexted_result, actual_result);
+        }
     }
 }
